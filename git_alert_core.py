@@ -1,26 +1,20 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
-# This file is part of < https://github.com/DevsExpo/FridayAssistant > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/FridayAssistant/blob/master/LICENSE >
-# All rights reserved.
-
 import asyncio
 import logging
-from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from html import escape
 import time
 import aiohttp
-from sys import getsizeof
-from quart import jsonify, request
 import hypercorn.asyncio
 import pyrogram
+
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from html import escape
+from sys import getsizeof
+from quart import jsonify, request
 from hypercorn import Config
 from pyrogram import Client
 from pyrogram import __version__ as ve
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from quart import Quart, jsonify, request
-
 from config import Config as config
 
 gitalertapi = Quart(__name__)
@@ -247,7 +241,7 @@ if config.HEROKU_APP_NAME:
 async def bot_(client, message):
     key_board = [
         InlineKeyboardButton(
-            text="Source Code", url="https://github.com/DevsExpo/GitAlertBot"
+            text="Support Group", url="https://t.me/BlackKnightsUnion_DevChat"
         ),
     ]
     file = "https://i.makeagif.com/media/2-18-2016/M3yKm-.gif"
